@@ -82,6 +82,12 @@
                                 $('.tooltipIcon').parent().find('.tooltip').on('mouseleave', function(){
                                         $(this).remove();
                                 });
+                                
+                                // remove tooltip - IE8 hack
+                                $('.tooltip').on('mouseleave', function(){
+                                        $('.tooltip').remove();
+                                });
+                                })
                         });
                 }
         };
